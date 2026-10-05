@@ -6,8 +6,9 @@ from dotenv import load_dotenv
 # Load .env file
 load_dotenv()
 
-# Get API key from .env
-API_KEY = os.getenv("WEATHER_API_KEY")
+# Get API key from streamlit secrets
+API_KEY = st.secrets["WEATHER_API_KEY"]
+
 
 st.set_page_config(page_title="Weather App", page_icon="🌥️")
 
